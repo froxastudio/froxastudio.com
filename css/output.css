@@ -7,10 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-600: oklch(66.6% 0.179 58.318);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
+    --spacing: 0.25rem;
+    --container-7xl: 80rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -182,32 +184,88 @@
       max-width: 96rem;
     }
   }
-  .mx-auto {
-    margin-inline: auto;
+  .flex {
+    display: flex;
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .flex-col {
+    flex-direction: column;
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .items-center {
+    align-items: center;
   }
-  .text-amber-600 {
-    color: var(--color-amber-600);
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
-  .underline {
-    text-decoration-line: underline;
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-\[\#202223\/20\] {
+    border-color: #202223/20;
+  }
+  .border-\[\#202223\] {
+    border-color: #202223;
+  }
+  .border-\[\#202223\]\/20 {
+    border-color: color-mix(in oklab, #202223 20%, transparent);
+  }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-32 {
+    padding-block: calc(var(--spacing) * 32);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .tracking-\[-6\%\] {
+    --tw-tracking: -6%;
+    letter-spacing: -6%;
+  }
+  .tracking-\[1\.08\] {
+    --tw-tracking: 1.08;
+    letter-spacing: 1.08;
+  }
+  .text-\[\#202223\] {
+    color: #202223;
+  }
+  .text-\[\#202223\]\/50 {
+    color: color-mix(in oklab, #202223 50%, transparent);
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
 }
-@property --tw-font-weight {
+@layer base {
+  html, body {
+    font-family: "Inter Tight", sans-serif;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-font-weight: initial;
+      --tw-border-style: solid;
+      --tw-tracking: initial;
     }
   }
 }
