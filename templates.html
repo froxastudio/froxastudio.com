@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Templates — Froxa Studio</title>
+    <meta name="description" content="Explore conversion-ready Framer and Webflow templates for SaaS, AI, and modern businesses.">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      html, body { font-family: "Inter Tight", sans-serif; }
+      .brand-mark { width: clamp(2.5rem, 2.041vw, 3rem); height: clamp(2.5rem, 2.041vw, 3rem); }
+      .nav-link { position: relative; }
+      .nav-link::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: currentColor; transition: width 180ms ease; }
+      .nav-link:hover::after, .nav-link[aria-current="page"]::after { width: 100%; }
+      .filter-button { transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease; }
+      .filter-button[aria-pressed="true"] { background: #202223; border-color: #202223; color: white; }
+      .template-card[hidden] { display: none; }
+      .template-card { animation: cardIn 260ms ease both; }
+      .template-card { cursor: pointer; }
+      .template-card:focus-visible { outline: 3px solid #202223; outline-offset: 6px; border-radius: 1rem; }
+      @keyframes cardIn { from { opacity: 0; transform: translateY(8px); } }
+      @media (hover: none), (pointer: coarse) {
+        .template-image:hover { transform: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .template-card { animation: none; }
+      }
+    </style>
+</head>
+<body class="bg-white text-[#202223]">
+    <header class="px-4 py-4 md:px-8 md:py-6 xl:px-16">
+        <nav class="mx-auto flex w-full max-w-[44rem] items-center justify-between gap-3 rounded-2xl bg-black p-2 lg:w-fit lg:justify-center lg:gap-4" aria-label="Main navigation">
+            <a href="./index.html" aria-label="Froxa Studio home">
+                <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#D9F9B9"/>
+                    <rect x="8" y="8" width="24" height="10" rx="2" fill="#202223"/>
+                    <rect x="8" y="22" width="12" height="10" rx="2" fill="#202223"/>
+                </svg>
+            </a>
+            <ul class="hidden items-center lg:flex">
+                <li class="px-4"><a href="./templates.html" aria-current="page" class="nav-link inline-block pb-1 pt-2 text-sm text-white">Templates</a></li>
+                <li class="px-4"><a href="./pricing.html" class="nav-link inline-block pb-1 pt-2 text-sm text-white">Pricing</a></li>
+                <li class="px-4"><a href="./about.html" class="nav-link inline-block pb-1 pt-2 text-sm text-white">About Us</a></li>
+            </ul>
+            <a href="./index.html" class="rounded-xl bg-white px-4 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-80">Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="px-5 pb-12 pt-14 text-center md:px-8 md:pb-16 md:pt-20 xl:pt-24">
+            <p class="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#667057]">Froxa Template Library</p>
+            <h1 class="mx-auto max-w-5xl text-[clamp(2.75rem,8vw,7rem)] font-medium leading-[0.95] tracking-[-0.04em]">Find your foundation.<br>Make it unmistakably yours.</h1>
+            <p class="mx-auto mt-6 max-w-2xl text-base font-light leading-7 text-[#747476] md:text-xl md:leading-8">Premium Framer and Webflow templates made for faster launches, stronger first impressions, and more conversions.</p>
+        </section>
+
+        <section class="px-3 pb-3 md:px-4 md:pb-4">
+            <div class="min-h-[60vh] rounded-3xl bg-[#F4F4F4] px-4 py-8 md:px-8 md:py-12 xl:px-14 xl:py-16">
+                <div class="mx-auto max-w-[1440px]">
+                    <div class="flex flex-col gap-5 border-b border-black/10 pb-8 lg:flex-row lg:items-end lg:justify-between">
+                        <div>
+                            <h2 class="text-3xl font-medium md:text-5xl">All templates</h2>
+                            <p class="mt-2 text-gray-500"><span data-result-count>2</span> templates ready to customize</p>
+                        </div>
+                        <label class="relative block w-full lg:max-w-sm">
+                            <span class="sr-only">Search templates</span>
+                            <svg class="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-gray-500" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            <input data-search type="search" placeholder="Search templates" class="w-full rounded-xl border border-black/15 bg-white py-3 pl-12 pr-4 outline-none transition focus:border-black focus:ring-2 focus:ring-black/10">
+                        </label>
+                    </div>
+
+                    <div class="flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between">
+                        <div class="flex flex-wrap gap-2" aria-label="Filter templates by category">
+                            <button class="filter-button rounded-full border border-black/20 px-4 py-2 text-sm font-medium" type="button" data-filter="all" aria-pressed="true">All</button>
+                            <button class="filter-button rounded-full border border-black/20 px-4 py-2 text-sm font-medium" type="button" data-filter="saas" aria-pressed="false">SaaS</button>
+                            <button class="filter-button rounded-full border border-black/20 px-4 py-2 text-sm font-medium" type="button" data-filter="ai" aria-pressed="false">AI</button>
+                            <button class="filter-button rounded-full border border-black/20 px-4 py-2 text-sm font-medium" type="button" data-filter="business" aria-pressed="false">Business</button>
+                        </div>
+                        <select data-platform aria-label="Filter by platform" class="w-full rounded-xl border border-black/15 bg-white px-4 py-2.5 text-sm outline-none md:w-auto">
+                            <option value="all">All platforms</option>
+                            <option value="framer">Framer</option>
+                            <option value="webflow">Webflow</option>
+                        </select>
+                    </div>
+
+                    <div data-template-grid class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:gap-10">
+                        <article class="template-card" data-name="Provia" data-category="saas business" data-platform="framer webflow" data-card-link="./template.html?template=provia" role="link" tabindex="0">
+                            <a href="./template.html?template=provia" class="group block overflow-hidden rounded-2xl bg-white" aria-label="View Provia template">
+                                <img src="./images/provia-template.png" class="template-image aspect-[1.36/1] w-full object-cover transition duration-500 ease-out group-hover:scale-[1.03]" alt="Provia SaaS and business website template preview">
+                            </a>
+                            <div class="mt-5 flex items-start justify-between gap-4">
+                                <div>
+                                    <h3 class="text-3xl font-medium">Provia</h3>
+                                    <p class="mt-1 max-w-xl text-base leading-6 text-gray-500 md:text-lg">A versatile SaaS and business template built for clarity, credibility, and growth.</p>
+                                    <div class="mt-3 flex gap-2 text-xs font-medium uppercase tracking-wider text-gray-500"><span>Framer</span><span>•</span><span>Webflow</span></div>
+                                </div>
+                                <span class="shrink-0 rounded-xl border border-black/25 px-4 py-2.5 text-sm font-medium">$129</span>
+                            </div>
+                        </article>
+
+                        <article class="template-card" data-name="Clario" data-category="saas ai" data-platform="framer webflow" data-card-link="./template.html?template=clario" role="link" tabindex="0">
+                            <a href="./template.html?template=clario" class="group block overflow-hidden rounded-2xl bg-white" aria-label="View Clario template">
+                                <img src="./images/clario-template.png" class="template-image aspect-[1.36/1] w-full object-cover transition duration-500 ease-out group-hover:scale-[1.03]" alt="Clario SaaS and AI website template preview">
+                            </a>
+                            <div class="mt-5 flex items-start justify-between gap-4">
+                                <div>
+                                    <h3 class="text-3xl font-medium">Clario</h3>
+                                    <p class="mt-1 max-w-xl text-base leading-6 text-gray-500 md:text-lg">A bold, conversion-focused template for SaaS, AI, and next-generation products.</p>
+                                    <div class="mt-3 flex gap-2 text-xs font-medium uppercase tracking-wider text-gray-500"><span>Framer</span><span>•</span><span>Webflow</span></div>
+                                </div>
+                                <span class="shrink-0 rounded-xl border border-black/25 px-4 py-2.5 text-sm font-medium">$129</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div data-empty-state hidden class="py-24 text-center">
+                        <p class="text-3xl font-medium">No templates found</p>
+                        <p class="mt-2 text-gray-500">Try another keyword or reset your filters.</p>
+                        <button data-reset class="mt-6 rounded-xl bg-black px-5 py-3 text-white" type="button">Reset filters</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="px-6 py-12 text-center text-sm text-[#202223]/50 md:py-16">
+        <p>Copyright ©2025 Froxa Studio — All Rights Reserved</p>
+    </footer>
+
+    <script>
+      (function () {
+        const cards = [...document.querySelectorAll('.template-card')];
+        const buttons = [...document.querySelectorAll('[data-filter]')];
+        const search = document.querySelector('[data-search]');
+        const platform = document.querySelector('[data-platform]');
+        const count = document.querySelector('[data-result-count]');
+        const empty = document.querySelector('[data-empty-state]');
+        const grid = document.querySelector('[data-template-grid]');
+        let category = 'all';
+
+        cards.forEach((card) => {
+          card.addEventListener('click', (event) => {
+            if (!event.target.closest('a, button')) window.location.href = card.dataset.cardLink;
+          });
+          card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              window.location.href = card.dataset.cardLink;
+            }
+          });
+        });
+
+        function applyFilters() {
+          const query = search.value.trim().toLowerCase();
+          let visible = 0;
+          cards.forEach((card) => {
+            const matchesSearch = !query || card.textContent.toLowerCase().includes(query) || card.dataset.name.toLowerCase().includes(query);
+            const matchesCategory = category === 'all' || card.dataset.category.split(' ').includes(category);
+            const matchesPlatform = platform.value === 'all' || card.dataset.platform.split(' ').includes(platform.value);
+            const show = matchesSearch && matchesCategory && matchesPlatform;
+            card.hidden = !show;
+            if (show) visible += 1;
+          });
+          count.textContent = visible;
+          empty.hidden = visible !== 0;
+          grid.hidden = visible === 0;
+        }
+
+        buttons.forEach((button) => button.addEventListener('click', () => {
+          category = button.dataset.filter;
+          buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+          applyFilters();
+        }));
+        search.addEventListener('input', applyFilters);
+        platform.addEventListener('change', applyFilters);
+        document.querySelector('[data-reset]').addEventListener('click', () => {
+          search.value = '';
+          platform.value = 'all';
+          category = 'all';
+          buttons.forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.filter === 'all')));
+          applyFilters();
+          search.focus();
+        });
+      })();
+    </script>
+</body>
+</html>

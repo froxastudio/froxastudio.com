@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <title>Contact Us — Froxa Studio</title>
+    <meta name="description" content="Tell Froxa Studio about your custom website project.">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      html,body { font-family:"Inter Tight",sans-serif; }
+      .brand-mark { width:clamp(2.5rem,2.041vw,3rem);height:clamp(2.5rem,2.041vw,3rem); }
+      .nav-link { position:relative; }
+      .nav-link::after { content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:currentColor;transition:width 180ms ease; }
+      .nav-link:hover::after { width:100%; }
+      .field { width:100%;border:1px solid rgb(32 34 35 / .16);border-radius:.75rem;background:white;padding:.875rem 1rem;outline:none;transition:border-color 180ms ease,box-shadow 180ms ease; }
+      .field:focus { border-color:#202223;box-shadow:0 0 0 3px rgb(32 34 35 / .08); }
+    </style>
+</head>
+<body class="text-[#202223]">
+    <header class="px-4 py-4 md:px-8 md:py-6 xl:px-16">
+        <nav class="mx-auto flex w-full max-w-[44rem] items-center justify-between gap-3 rounded-2xl bg-black p-2 lg:w-fit lg:justify-center lg:gap-4" aria-label="Main navigation">
+            <a href="./index.html" aria-label="Froxa Studio home"><svg class="brand-mark" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#D9F9B9"/><rect x="8" y="8" width="24" height="10" rx="2" fill="#202223"/><rect x="8" y="22" width="12" height="10" rx="2" fill="#202223"/></svg></a>
+            <ul class="hidden items-center lg:flex">
+                <li class="px-4"><a href="./templates.html" class="nav-link inline-block pb-1 pt-2 text-sm text-white">Templates</a></li>
+                <li class="px-4"><a href="./pricing.html" class="nav-link inline-block pb-1 pt-2 text-sm text-white">Pricing</a></li>
+                <li class="px-4"><a href="./about.html" class="nav-link inline-block pb-1 pt-2 text-sm text-white">About Us</a></li>
+            </ul>
+            <a href="./index.html" class="rounded-xl bg-white px-4 py-2.5 text-sm font-medium text-black hover:opacity-80">Back to Home</a>
+        </nav>
+    </header>
+
+    <main class="px-3 pb-3 md:px-4 md:pb-4">
+        <section class="mx-auto max-w-7xl px-3 pb-14 pt-14 text-center md:px-8 md:pb-20 md:pt-24">
+            <p class="text-sm font-medium uppercase tracking-[.2em] text-[#667057]">Start a project</p>
+            <h1 class="mx-auto mt-4 max-w-5xl text-[clamp(3rem,8vw,7rem)] font-medium leading-[.95] tracking-[-.045em]">Let’s make something people remember.</h1>
+            <p class="mx-auto mt-7 max-w-2xl text-lg font-light leading-8 text-[#747476] md:text-xl">Tell us where you are, where you want to go, and what a successful launch looks like.</p>
+        </section>
+
+        <section class="rounded-3xl bg-[#F4F4F4] px-4 py-10 md:px-8 md:py-16 xl:px-14 xl:py-20">
+            <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[.75fr_1.25fr] lg:gap-20">
+                <div>
+                    <p class="text-sm font-medium uppercase tracking-[.18em] text-[#667057]">Custom projects</p>
+                    <h2 class="mt-4 text-4xl font-medium leading-tight tracking-[-.03em] md:text-5xl">Built around your brand, goals, and timeline.</h2>
+                    <p class="mt-5 text-lg font-light leading-8 text-gray-500">Custom pricing depends on scope. Share a few details and we’ll reply with the right next step.</p>
+                    <div class="mt-10 space-y-6 border-t border-black/10 pt-8">
+                        <div><p class="text-sm text-gray-500">Email</p><a class="mt-1 inline-block text-xl font-medium" href="mailto:hello@froxastudio.com">hello@froxastudio.com</a></div>
+                        <div><p class="text-sm text-gray-500">Typical response time</p><p class="mt-1 text-xl font-medium">Within 1–2 business days</p></div>
+                        <div><p class="text-sm text-gray-500">Best suited for</p><p class="mt-1 text-xl font-medium">Brand sites, SaaS, AI, and digital products</p></div>
+                    </div>
+                </div>
+
+                <form data-contact-form class="rounded-3xl bg-white p-5 md:p-8">
+                    <div class="grid gap-5 sm:grid-cols-2">
+                        <label class="block"><span class="mb-2 block text-sm font-medium">Your name</span><input required name="name" class="field" autocomplete="name" placeholder="Jane Smith"></label>
+                        <label class="block"><span class="mb-2 block text-sm font-medium">Work email</span><input required name="email" type="email" class="field" autocomplete="email" placeholder="jane@company.com"></label>
+                    </div>
+                    <label class="mt-5 block"><span class="mb-2 block text-sm font-medium">Company or brand</span><input name="company" class="field" autocomplete="organization" placeholder="Your company name"></label>
+                    <div class="mt-5 grid gap-5 sm:grid-cols-2">
+                        <label class="block"><span class="mb-2 block text-sm font-medium">Project type</span><select name="project" class="field"><option>Custom website</option><option>Template customization</option><option>Framer development</option><option>Webflow development</option><option>Something else</option></select></label>
+                        <label class="block"><span class="mb-2 block text-sm font-medium">Approximate budget</span><select name="budget" class="field"><option>Not sure yet</option><option>$1,000–$3,000</option><option>$3,000–$7,500</option><option>$7,500–$15,000</option><option>$15,000+</option></select></label>
+                    </div>
+                    <label class="mt-5 block"><span class="mb-2 block text-sm font-medium">Tell us about the project</span><textarea required name="message" class="field min-h-40 resize-y" placeholder="What are you building, and what would make this project successful?"></textarea></label>
+                    <button class="mt-6 w-full rounded-xl bg-black px-5 py-4 text-lg font-medium text-white transition-opacity hover:opacity-80" type="submit">Send Project Inquiry</button>
+                    <p class="mt-3 text-center text-sm text-gray-400">Submitting opens your email app with the inquiry ready to send.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="px-6 py-14 text-center text-sm text-[#202223]/50"><p>Copyright ©2025 Froxa Studio — All Rights Reserved</p></footer>
+    <script>
+      document.querySelector('[data-contact-form]').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const data = new FormData(this);
+        const subject = `Project inquiry from ${data.get('name')}`;
+        const body = [
+          `Name: ${data.get('name')}`,
+          `Email: ${data.get('email')}`,
+          `Company: ${data.get('company') || 'Not provided'}`,
+          `Project type: ${data.get('project')}`,
+          `Budget: ${data.get('budget')}`,
+          '',
+          'Project details:',
+          data.get('message')
+        ].join('\n');
+        window.location.href = `mailto:hello@froxastudio.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+</body>
+</html>

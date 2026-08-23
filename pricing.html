@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <title>Pricing — Froxa Studio</title>
+    <meta name="description" content="Simple, transparent pricing for premium Froxa Studio website templates.">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      html,body { font-family:"Inter Tight",sans-serif; }
+      .brand-mark { width:clamp(2.5rem,2.041vw,3rem); height:clamp(2.5rem,2.041vw,3rem); }
+      .nav-link { position:relative; }
+      .nav-link::after { content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:currentColor;transition:width 180ms ease; }
+      .nav-link:hover::after,.nav-link[aria-current="page"]::after { width:100%; }
+      .check { display:flex;align-items:flex-start;gap:.75rem; }
+      .check::before { content:"✓";display:grid;place-items:center;flex:0 0 auto;width:1.5rem;height:1.5rem;border-radius:999px;background:#d9f9b9;color:#202223;font-size:.8rem;font-weight:600; }
+    </style>
+</head>
+<body class="text-[#202223]">
+    <header class="px-4 py-4 md:px-8 md:py-6 xl:px-16">
+        <nav class="mx-auto flex w-full max-w-[44rem] items-center justify-between gap-3 rounded-2xl bg-black p-2 lg:w-fit lg:justify-center lg:gap-4" aria-label="Main navigation">
+            <a href="./index.html" aria-label="Froxa Studio home"><svg class="brand-mark" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#D9F9B9"/><rect x="8" y="8" width="24" height="10" rx="2" fill="#202223"/><rect x="8" y="22" width="12" height="10" rx="2" fill="#202223"/></svg></a>
+            <ul class="hidden items-center lg:flex">
+                <li class="px-4"><a href="./templates.html" class="nav-link inline-block pb-1 pt-2 text-sm text-white">Templates</a></li>
+                <li class="px-4"><a href="./pricing.html" aria-current="page" class="nav-link inline-block pb-1 pt-2 text-sm text-white">Pricing</a></li>
+                <li class="px-4"><a href="./about.html" class="nav-link inline-block pb-1 pt-2 text-sm text-white">About Us</a></li>
+            </ul>
+            <a href="./index.html" class="rounded-xl bg-white px-4 py-2.5 text-sm font-medium text-black hover:opacity-80">Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="px-5 pb-12 pt-14 text-center md:pb-20 md:pt-24">
+            <p class="mb-4 text-sm font-medium uppercase tracking-[.2em] text-[#667057]">Simple pricing</p>
+            <h1 class="mx-auto max-w-5xl text-[clamp(3rem,8vw,7rem)] font-medium leading-[.95] tracking-[-.04em]">One price.<br>No surprises.</h1>
+            <p class="mx-auto mt-6 max-w-2xl text-lg font-light leading-8 text-[#747476] md:text-xl">Choose a premium foundation, customize every detail, and launch with confidence. No subscriptions or hidden fees.</p>
+        </section>
+
+        <section class="px-3 pb-3 md:px-4 md:pb-4">
+            <div class="rounded-3xl bg-[#F4F4F4] px-4 py-12 md:px-8 md:py-16 xl:px-14">
+                <div class="mx-auto grid max-w-5xl gap-6 lg:grid-cols-2">
+                    <article class="flex flex-col rounded-3xl bg-white p-6 md:p-9">
+                        <p class="text-sm font-medium uppercase tracking-[.16em] text-gray-500">Single template</p>
+                        <div class="mt-5 flex items-end gap-2"><span class="text-6xl font-medium tracking-[-.04em]">$129</span><span class="pb-2 text-gray-500">one-time</span></div>
+                        <p class="mt-5 text-lg leading-7 text-gray-500">Everything you need to turn one template into a website that feels entirely your own.</p>
+                        <ul class="mt-8 space-y-4">
+                            <li class="check">Complete template and all included pages</li>
+                            <li class="check">Framer or Webflow project access</li>
+                            <li class="check">Responsive layouts and reusable components</li>
+                            <li class="check">Lifetime template updates</li>
+                            <li class="check">Setup documentation and email support</li>
+                        </ul>
+                        <a href="./templates.html" class="mt-10 rounded-xl bg-black px-5 py-4 text-center font-medium text-white">Choose a Template</a>
+                    </article>
+                    <article class="flex flex-col rounded-3xl bg-[#202223] p-6 text-white md:p-9">
+                        <p class="text-sm font-medium uppercase tracking-[.16em] text-[#D9F9B9]">Need something unique?</p>
+                        <h2 class="mt-5 text-5xl font-medium leading-[1] tracking-[-.03em]">Custom design, built around your brand.</h2>
+                        <p class="mt-6 text-lg leading-7 text-white/60">For teams that need strategy, art direction, and a tailored website—not just a starting point.</p>
+                        <ul class="mt-8 space-y-4">
+                            <li class="check">Brand-aligned creative direction</li>
+                            <li class="check">Custom UX and responsive design</li>
+                            <li class="check">Framer or Webflow development</li>
+                            <li class="check">Launch support and handover</li>
+                        </ul>
+                        <a href="./contact.html" class="mt-auto rounded-xl bg-[#D9F9B9] px-5 py-4 text-center font-medium text-[#202223] lg:mt-10">Start a Conversation</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="px-6 py-14 text-center text-sm text-[#202223]/50"><p>Copyright ©2025 Froxa Studio — All Rights Reserved</p></footer>
+</body>
+</html>
